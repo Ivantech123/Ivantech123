@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="124" viewBox="0 0 1000 124">
+  <rect x="0.5" y="0.5" width="999" height="123" rx="10" fill="none" stroke="#d0d7de"/>
+  <text x="24" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#1f2328">179</text><text x="24" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">вкладов за год</text>
+  <text x="214.4" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#1f2328">38</text><text x="214.4" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">активных дней</text>
+  <text x="404.8" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#1f2328">3</text><text x="404.8" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">дн. — самая длинная серия</text>
+  <text x="595.2" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#1f2328">0</text><text x="595.2" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">дн. — текущая серия</text>
+  <text x="785.6" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#1f2328">37</text><text x="785.6" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">в лучший день · 28 дек 2025</text>
+  <line x1="24" y1="92" x2="976" y2="92" stroke="#d0d7de"/>
+  <text x="24" y="111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#59636e">чаще всего коммичу: воскресенье</text>
+</svg>

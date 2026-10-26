@@ -43,6 +43,83 @@ let me = Dev {
 </tr>
 </table>
 
+#### Подробнее о каждом
+
+<details>
+<summary><b>Prosvet</b> — обход блокировок одной кнопкой · Rust · Tauri 2</summary>
+<br>
+
+Оболочка над движками обхода DPI [zapret2 / zapret](https://github.com/bol-van/zapret2) и стратегиями Flowseal. Вместо двадцати `.bat`-файлов — одна кнопка: YouTube, Discord и другие сервисы снова работают, без VPN, серверов и подписок.
+
+- **Сам подбирает стратегию** — проверяет, что заблокировано у провайдера, перебирает ~30 стратегий и оставляет лучшую.
+- **Сторож** — периодически проверяет доступ и переключается, если провайдер что-то поменял; раз в сутки перепроверяет всё заново.
+- **Честная проверка** — тестер докачивает данные и ловит характерную для ТСПУ «заморозку» соединения на ~16 КБ.
+- **Умный DNS для ИИ** — Gemini, ChatGPT, Claude и другие, которые сами блокируют Россию, идут через прозрачный прокси; остальной трафик остаётся локальным.
+- Живёт в трее, стартует без UAC, движок завершается вместе с приложением (Job Object), находит конфликтующие GoodbyeDPI/zapret.
+
+[Скачать](https://github.com/Ivantech123/Prosvet_antizapret_app/releases/latest) · [Исходники](https://github.com/Ivantech123/Prosvet_antizapret_app)
+</details>
+
+<details>
+<summary><b>Стенограф</b> — расшифровка записей без интернета · Rust · whisper.cpp</summary>
+<br>
+
+Запись заседания или консультации нельзя отдавать в облако — Стенограф распознаёт речь прямо на компьютере. WMA, MP3, M4A, AMR, видео → TXT, DOCX, SRT.
+
+- **Сам подбирает режим под железо**: на RTX 4060 — до ×64 быстрее реального времени, на процессоре — около ×2. Видеокарты через Vulkan: GeForce, Radeon, Intel Arc.
+- **Словарь** имён и номеров дел: «А40 Дефис 12345» превращается в «А40-12345/2026».
+- **Чистка мусора Whisper** — фантомные «Субтитры сделал…» на тишине и зацикленные повторы.
+- **DOCX по делопроизводству**: Times New Roman 12, отступы, поля; абзацы по паузам с метками времени.
+- Очередь файлов, не затирает ваши правки, установка без прав администратора, 11 МБ.
+
+[Скачать](https://github.com/Ivantech123/Stenograv_app/releases/latest) · [Исходники](https://github.com/Ivantech123/Stenograv_app)
+</details>
+
+<details>
+<summary><b>Harbor</b> — свой браузер на Firefox · C++ · JS</summary>
+<br>
+
+Независимый браузер на базе Firefox 156: вертикальные вкладки, пространства, split-view, магазин модов и подробная настройка внешнего вида. Каналы Release и Twilight.
+
+[Скачать](https://github.com/Ivantech123/Harbor/releases/latest) · [Исходники](https://github.com/Ivantech123/Harbor)
+</details>
+
+<details>
+<summary><b>Multi_calude</b> — несколько аккаунтов Claude Code · C#</summary>
+<br>
+
+- До пяти аккаунтов: у каждого свой вход, а история, память, скиллы и плагины общие.
+- Кончился лимит — `/switch-account`, и та же сессия продолжается под другим аккаунтом.
+- 5-часовой и недельный лимиты всех аккаунтов в меню, строке состояния и в трее.
+- Поиск по сессиям, корзина, избранные проекты, анимированный маскот и три темы.
+- Windows, macOS и Linux, x64 и ARM.
+
+[Скачать](https://github.com/Ivantech123/Multi_calude/releases/latest) · [Исходники](https://github.com/Ivantech123/Multi_calude)
+</details>
+
+<details>
+<summary><b>ULN</b> — сеть юристов без серверов · JavaScript</summary>
+<br>
+
+United Lawyer Network — русская сборка p2p-сети [Ember](https://github.com/CRTnoise/ember-p2p) для юристов: посты, обсуждения и зашифрованная переписка идут напрямую между участниками, без аккаунтов и компании посередине. Протокол совместим с Ember.
+
+[Сайт](https://social.a2chatsky.ru) · [Скачать](https://github.com/Ivantech123/ULN/releases/latest) · [Исходники](https://github.com/Ivantech123/ULN)
+</details>
+
+<details>
+<summary><b>SUDRF Parser</b> — MCP-сервер для ГАС «Правосудие» · TypeScript</summary>
+<br>
+
+ГАС «Правосудие» — это не один API, а тысячи сайтов судов со своей вёрсткой и кодировкой Windows-1251. Парсер делает программно то, что человек делает в браузере.
+
+- Расписание заседаний без капчи, расширенный поиск по номеру, УИД, участнику, ИНН, судье и датам.
+- Карточка дела: участники, движение, тексты актов.
+- Реестр ~2269 судов РФ с поиском по региону и поддомену.
+- Работает как MCP-сервер — подключается к ИИ-ассистентам.
+
+[Исходники](https://github.com/Ivantech123/SUDRF-PARSER-)
+</details>
+
 <details>
 <summary><b>Ещё проекты</b> — инструменты для юристов, боты, веб</summary>
 <br>
@@ -65,6 +142,12 @@ let me = Dev {
 
 </details>
 
+### Как я работаю
+
+- **Локально по умолчанию.** Если задачу можно решить на компьютере пользователя — решаю там: без серверов, аккаунтов и утечек данных.
+- **Одна кнопка вместо инструкции.** Сложное (DPI, нейросети, парсинг судов) прячу за понятным интерфейсом.
+- **Релизы, а не прототипы.** Установщики, автообновление, тёмная и светлая тема, русский язык из коробки.
+
 ### Статистика
 
 <picture>
@@ -72,12 +155,15 @@ let me = Dev {
   <img alt="Статистика GitHub" src="assets/stats-light.svg" width="100%">
 </picture>
 
-<!-- Змейка появится, когда заработает GitHub Actions (job snake в .github/workflows/profile.yml). Раскомментировать:
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ivantech123/Ivantech123/output/snake-dark.svg">
-  <img alt="Змейка ест вклады за год" src="https://raw.githubusercontent.com/Ivantech123/Ivantech123/output/snake-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contrib-dark.svg">
+  <img alt="Вклады за год" src="assets/contrib-light.svg" width="100%">
 </picture>
--->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+  <img alt="Змейка ест вклады за год" src="assets/snake-light.svg" width="100%">
+</picture>
 
 <details open>
 <summary><b>Что происходит сейчас</b></summary>
@@ -92,5 +178,5 @@ let me = Dev {
 - 📦 [Prosvet_antizapret_app](https://github.com/Ivantech123/Prosvet_antizapret_app) — релиз v0.1.0 <sub>· 9 дн. назад</sub>
 <!--ACTIVITY:END-->
 
-<sub>Обновляется автоматически раз в сутки.</sub>
+<sub>Статистика, змейка и лента собираются скриптом <code>scripts/build.mjs</code>.</sub>
 </details>

@@ -1,6 +1,7 @@
 // Генерирует SVG для профиля (шапка, карточки проектов, статистика)
 // и обновляет блок активности в README. Запускается в Actions раз в сутки.
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { contributions, snake, streaks, contribCard, SNAKE } from "./contrib.mjs";
 
 const USER = "Ivantech123";
 const ROOT = new URL("../", import.meta.url);
@@ -205,9 +206,13 @@ const events = await api(`/users/${USER}/events/public?per_page=60`);
 const byName = Object.fromEntries(repos.map((r) => [r.name, r]));
 
 await mkdir(new URL("assets/", ROOT), { recursive: true });
+const days = await contributions(USER);
+const st = streaks(days);
 for (const [mode, t] of Object.entries(THEMES)) {
   await writeFile(new URL(`assets/header-${mode}.svg`, ROOT), header(t));
   await writeFile(new URL(`assets/stats-${mode}.svg`, ROOT), stats(t, user, repos));
+  await writeFile(new URL(`assets/contrib-${mode}.svg`, ROOT), contribCard(t, st));
+  await writeFile(new URL(`assets/snake-${mode}.svg`, ROOT), snake(SNAKE[mode], days));
   for (const [name, title, desc] of FEATURED) {
     if (!byName[name]) continue;
     await writeFile(new URL(`assets/repo-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}-${mode}.svg`, ROOT), repoCard(t, title, desc, byName[name]));
