@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="150" viewBox="0 0 480 150">
+  <rect x="0.5" y="0.5" width="479" height="149" rx="10" fill="none" stroke="#d0d7de"/>
+  <text x="24" y="40" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" font-weight="600" fill="#1f2328">SUDRF Parser</text>
+  <text x="456" y="40" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#59636e">↗</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#59636e"><text x="24" y="70">Парсер судебных дел с сайтов судов общей юрисдикции по</text><text x="24" y="90">всей стране.</text></g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13"><circle cx="29" cy="126" r="5" fill="none" stroke="#1f2328" stroke-width="1.5"/><text x="40" y="130" fill="#59636e">TypeScript</text><text x="138" y="130" fill="#59636e">★ 0</text></g>
+</svg>
